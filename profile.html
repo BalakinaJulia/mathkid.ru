@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <title>Courses in mathematics</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="../script.js" defer></script>
+    
+</head>
+<body>
+     
+    <a class="array" href="file:///C:/Users/%D0%AE%D0%BB%D1%8F/Desktop/mathsite/index.html">
+        <img class="array-img"  src="img/ep_arrow-up-bold.svg" alt="Логотип сайта">
+    </a>
+     
+    <div class="profile-card">
+        <div class="avatar" onclick="document.getElementById('avatarInput').click()"></div>
+        <input type="file" id="avatarInput" accept="img/*" style="display:none" onchange="loadAvatar(event)">
+        <div class="contact-info">
+            <p class="name" contenteditable="true">Имя Фамилия</p>
+            <p class="phone-number" contenteditable="true">Номер телефона</p>
+        </div>
+    </div>
+    <div class="dropdown">
+        <input type="checkbox" id="toggle" class="dropdown-checkbox">
+        <label for="toggle" class="dropdown-button">ФИО ребенка</label>
+        <div class="dropdown-content">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Пн</th>
+                    <th scope="col">Вт</th>
+                    <th scope="col">Ср</th>
+                    <th scope="col">Чт</th>
+                    <th scope="col">Пт</th>
+                    <th scope="col">Сб</th>
+                    <th scope="col">Вс</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">8:30-9:30</th>
+                    <td>Математика 1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9:45-10:45</th>
+                    <td>Математика 2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11:00-12:00</th>
+                    <td>Математика 3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12:30-13:30</th>
+                    <td>Математика 4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <!-- Добавьте дополнительные строки для других дней недели -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+     
+</body>
+</html>

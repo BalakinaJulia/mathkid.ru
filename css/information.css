@@ -1,0 +1,153 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #303030;
+   
+}
+.array-img{
+    width: 50px;
+    padding: 0 0 32px 0; 
+    margin:40px 20px 20px 80px;
+}
+.programm{
+    padding: 16px 80px 0  ;
+}
+.programm-info {
+    display: flex;
+}
+.programm-text {
+    max-width: 85%;
+    font-size: 24px;
+     
+    font-weight:500;
+    line-height: 26px;
+    
+    }
+.img-programm{
+    
+    width: 40%;
+    height: 40%;   
+    }
+.img-arrow {
+        width: 3%;
+        height: 3%;  
+        padding: 32px 80px 0  ;
+    }
+
+    /* Surface Pro 7, Nest Hub Max, ASUS ZenBook Fold */
+@media (max-width: 1280px) {
+    .array-img {
+        width: 50px;
+        margin: 40px 20px 20px 80px;
+    }
+    .programm {
+        padding: 16px 60px 0;
+    }
+    .programm-info {
+        flex-direction: row;
+    }
+    .programm-text {
+        max-width: 85%;
+        font-size: 24px;
+    }
+    .img-programm {
+        width: 40%;
+        height: 40%;
+    }
+    .img-arrow {
+        width: 3%;
+        height: 3%;
+        padding: 32px 60px 0;
+    }
+}
+ 
+/* iPad Mini, iPad Air, Surface Duo, Galaxy Z Fold 5, Samsung Galaxy A51/A71 */
+@media (max-width: 1030px) {
+    .array-img {
+        width: 45px;
+        margin: 30px 30px;
+    }
+    .programm {
+        padding: 16px 40px 0;
+    }
+    .programm-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .programm-text {
+        max-width: 90%;
+        font-size: 22px;
+        text-align: left;
+    }
+    .img-programm {
+        width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .img-arrow {
+        width: 8%;
+        height: auto;
+        padding: 16px 40px 0;
+    }
+}
+/* iPhone SE, iPhone XR, iPhone 12 Pro, iPhone 14 Pro Max */
+@media (max-width: 550px) {
+    .array-img {
+        width: 40px;
+        margin: 20px 20px;
+    }
+    .programm {
+        padding: 16px 20px 0;
+    }
+    .programm-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .programm-text {
+        max-width: 80%;
+        font-size: 16px;
+        text-align: left;
+    }
+    .img-programm {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .img-arrow {
+        width: 10%;
+        height: auto;
+        padding: 16px 20px 0;
+    }
+}
+
+/* Google Pixel 7, Samsung Galaxy S8+, Samsung Galaxy S20 Ultra */
+@media (max-width: 412px) {
+    .array-img {
+        width: 40px;
+        margin: 20px 20px;
+    }
+    .programm {
+        padding: 16px 20px 0;
+    }
+    .programm-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .programm-text {
+        max-width: 80%;
+        font-size: 16px;
+        text-align: left;
+    }
+    .img-programm {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .img-arrow {
+        width: 10%;
+        height: auto;
+        padding: 16px 20px 0;
+    }
+}
