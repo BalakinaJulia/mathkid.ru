@@ -1,13 +1,23 @@
-body {
+ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin: 60px;
+    margin: 0 60px;
     padding: 60px;
      
 }
+h1 {
+ margin: 60px 0 80px;
+}
+h2{
+    margin: 10px 0 30px;  
+}
+.back-to-dashboard {
+    margin: 10px 0 30px;   
+}
+ 
 .array-img{
     width: 50px;
     padding: 0 0 32px 0; 
@@ -24,7 +34,7 @@ body {
     height: 100px;
     border-radius: 50%;
     background-image: url("/images/iconoir_profile-circle.svg");
-    margin-right: 100px;
+    margin: 0 40px 40px 0;
     cursor: pointer;
     background-size: cover;
     background-position: center;
@@ -140,3 +150,60 @@ th, td {
     padding: 50px;
     text-align: left;
 } */
+/* Surface Pro 7, Nest Hub Max, ASUS ZenBook Fold */
+@media (max-width: 1280px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar {
+        margin: 0 0 20px 0;
+    }
+}
+
+/* iPad Pro, Nest Hub */
+@media (max-width: 1024px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar {
+        margin: 0 0 20px 0;
+    }
+}
+
+/* iPad Mini, iPad Air, Surface Duo, Galaxy Z Fold 5, Samsung Galaxy A51/A71 */
+@media (max-width: 830px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar {
+        margin: 0 0 20px 0;
+    }
+}
+
+/* iPhone SE, iPhone XR, iPhone 12 Pro, iPhone 14 Pro Max */
+@media (max-width: 550px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar {
+        margin: 0 0 20px 0;
+    }
+}
+
+/* Google Pixel 7, Samsung Galaxy S8+, Samsung Galaxy S20 Ultra */
+@media (max-width: 412px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar {
+        margin: 0 0 20px 0;
+    }
+    body {
+        width: 95%;
+    }
+}
