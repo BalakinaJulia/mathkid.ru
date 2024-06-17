@@ -1,4 +1,4 @@
-body{
+ body{
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -61,6 +61,16 @@ body{
 .btn-primary:hover {
     background-color: #BBE2EC !important;
     border: #BBE2EC; 
+}
+.form-label{
+    margin: 0 10px 0 0;
+}
+.mb-3 {
+    margin: 30px 0;
+}
+.btn-primary{
+    border-radius: 60px;
+    max-width: 600px;
 }
 .form-check-label {
     margin: 2px 0 6px; 
@@ -128,7 +138,7 @@ body{
  /* iPhone SE, iPhone XR, iPhone 12 Pro, iPhone 14 Pro Max */
 @media (max-width: 550px) {
     .form {
-        width: 95%;
+        width: 75%;
         padding: 32px;
     }
     .Title, .LargeTitle {
@@ -145,7 +155,7 @@ body{
 /* Google Pixel 7, Samsung Galaxy S8+, Samsung Galaxy S20 Ultra */
 @media (max-width: 412px) {
     .form {
-        width: 95%;
+        width: 70%;
         padding: 32px;
     }
     .Title, .LargeTitle {
