@@ -1,89 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Dashboard</title>
-    <style>
-        .avatar-header {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            margin-left: 20px;
-            cursor: pointer;
-        }
-        .avatar-container {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-            background-size: cover;
-            background-position: center;
-        }
-        .avatar-info {
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
-    <script>
-        function logout() {
-            localStorage.setItem('loggedIn', 'false');
-            window.location.href = 'index.html';
-        }
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const user = JSON.parse(localStorage.getItem('user'));
-            document.getElementById('username').textContent = user.username;
-            document.getElementById('email').textContent = user.email;
-
-            const avatar = document.querySelector('.avatar-header');
-            if (user.avatar) {
-                avatar.style.backgroundImage = url(${user.avatar});
-            } else {
-                avatar.style.backgroundImage = 'url(/images/default-avatar.png)'; // путь к изображению по умолчанию
-            }
-        });
-    </script>
-</head>
-<body>
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-         <a class="logo">
-            <img class="logo-img" src="/images/logo.svg" alt="Логотип сайта">
-        </a>
-            <ul class="menu">
-                 <li class="menu-item">
-                    <a class="menu-link" href="#about">О нас</a>
-                 </li>
-                 <li class="menu-item">
-                    <a class="menu-link" href="#group">Группы и цены</a>
-                 </li>
-                 <li class="menu-item">
-                    <a class="menu-link" href="#contacts">Записаться в группу</a>
-                 </li>
-                 <li class="menu-item">
-                    <a class="menu-link" href="#inform">Контакты</a>
-                 </li>
-            </ul>
-            <div class="login">
-                <a href="profile.html"><div class="avatar-header" id="avatarHeader"></div></a>
-                <a class="login-link" href="javascript:void(0);" onclick="logout()">Выход</a>
-            </div>
-         </nav>
-      </div>   
-    </header>
-    <main class="main"> -->
+ 
         <!DOCTYPE html>
         <html lang="ru">
         <head>
@@ -92,8 +7,8 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="/css/normalize.css">
-            <link rel="stylesheet" href="/css/style.css">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/style.css">
             <title>Dashboard</title>
             <style>
                 .avatar-header {
@@ -125,7 +40,7 @@
             <script>
                 function logout() {
                     localStorage.setItem('loggedIn', 'false');
-                    window.location.href = 'http://localhost:3001';
+                    window.location.href = 'index.html';
                 }
         
                 document.addEventListener('DOMContentLoaded', (event) => {
@@ -164,7 +79,7 @@
                             </li>
                         </ul>
                         <div class="login">
-                            <a href="http://localhost:3001/profile"><div class="avatar-header" id="avatarHeader" style="background-image: url(/images/iconoir_profile-circle.svg);"></div></a>
+                            <a href="profile.html"><div class="avatar-header" id="avatarHeader" style="background-image: url(/images/iconoir_profile-circle.svg);"></div></a>
                             <a class="login-link" href="javascript:void(0);" onclick="logout()">Выход</a>
                         </div>
                     </nav>
