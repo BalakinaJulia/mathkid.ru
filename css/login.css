@@ -1,4 +1,4 @@
-body{
+ body{
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 12px;
@@ -60,6 +60,16 @@ body{
 }
 .form-check-input {
     color: #40A2E3;
+}
+.form-label{
+    margin: 0 10px 0 0;
+}
+.mb-3 {
+    margin: 30px 0;
+}
+.btn-primary{
+    border-radius: 60px;
+    max-width: 600px;
 }
 .btn-primary:default, .btn-primary:active, .btn-primary:visited {
     background-color: #40A2E3 !important;
@@ -155,6 +165,7 @@ body{
     }
      
 }
+
 
  
 
