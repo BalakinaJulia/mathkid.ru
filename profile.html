@@ -58,14 +58,14 @@
 </head>
 <body>
     <div class="back-to-dashboard" onclick="goToDashboard()">
-        <img src="/images/ep_arrow-up-bold.svg" alt="Back to Dashboard">
+        <img src="/img/ep_arrow-up-bold.svg" alt="Back to Dashboard">
         
     </div>
     <main class="main">
         <h1>Личный кабинет</h1>
         <div class="avatar-container">
             <div class="avatar" onclick="document.getElementById('avatarInput').click()"></div>
-            <input type="file" id="avatarInput" accept="image/*" style="display:none" onchange="loadAvatar(event)">
+            <input type="file" id="avatarInput" accept="img/*" style="display:none" onchange="loadAvatar(event)">
             <div class="avatar-info">
                 <p class="name" id="username" contenteditable="true">Имя Фамилия</p>
                 <p class="phone-number" id="phone" contenteditable="true">Номер телефона</p>
@@ -89,7 +89,7 @@
               if (user.avatar) {
                   avatar.style.backgroundImage = `url(${user.avatar})`;
               } else {
-                  avatar.style.backgroundImage = 'url(/images/iconoir_profile-circle.svg)';
+                  avatar.style.backgroundImage = 'url(/img/iconoir_profile-circle.svg)';
               }
 
               if (user.group) {
