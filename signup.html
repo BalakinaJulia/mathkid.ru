@@ -6,15 +6,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/signup.css">
-    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/signup.css">
     <title>Регистрация</title>
 </head>
 <body>
-  <a class="array" href="http://localhost:3001">
+  <a class="array" href="index.html">
     <img class="array-img" src="images/ep_arrow-up-bold.svg" alt="arrow"> </a>
-  <h2 class="Title"> Есть аккаунт? <a class="title-link" href="http://localhost:3001/login">Войдите</a></h2>
+  <h2 class="Title"> Есть аккаунт? <a class="title-link" href="login.html">Войдите</a></h2>
   <form class="form" onsubmit="register(event)">
     <h1 class="LargeTitle">Регистрация</h1>
     <div class="mb-3">
@@ -39,7 +39,7 @@
         const password = document.getElementById('password').value;
         localStorage.setItem('user', JSON.stringify({ username, tel, password }));
         localStorage.setItem('loggedIn', 'true');
-        window.location.href = 'http://localhost:3001/profile';
+        window.location.href = 'profile.html';
     }
   </script>
 </body>
