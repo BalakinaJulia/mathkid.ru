@@ -7,26 +7,114 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
-    <title>Courses in mathematics</title>
-    <link rel="stylesheet" href="css/profile.css">
-    <script src="../script.js" defer></script>
-    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Личный кабинет</title>
+    <style>
+        .avatar-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+        .avatar-info {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .back-to-dashboard {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .back-to-dashboard img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .schedule {
+            margin-top: 20px;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .schedule-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-     
-    <a class="array" href="index.html">
-        <img class="array-img"  src="img/ep_arrow-up-bold.svg" alt="Логотип сайта">
-    </a>
-     
-    <div class="profile-card">
-        <div class="avatar" onclick="document.getElementById('avatarInput').click()"></div>
-        <input type="file" id="avatarInput" accept="img/*" style="display:none" onchange="loadAvatar(event)">
-        <div class="contact-info">
-            <p class="name" contenteditable="true">Имя Фамилия</p>
-            <p class="phone-number" contenteditable="true">Номер телефона</p>
-        </div>
+    <div class="back-to-dashboard" onclick="goToDashboard()">
+        <img src="/images/ep_arrow-up-bold.svg" alt="Back to Dashboard">
+        
     </div>
-    <div class="dropdown">
+    <main class="main">
+        <h1>Личный кабинет</h1>
+        <div class="avatar-container">
+            <div class="avatar" onclick="document.getElementById('avatarInput').click()"></div>
+            <input type="file" id="avatarInput" accept="image/*" style="display:none" onchange="loadAvatar(event)">
+            <div class="avatar-info">
+                <p class="name" id="username" contenteditable="true">Имя Фамилия</p>
+                <p class="phone-number" id="phone" contenteditable="true">Номер телефона</p>
+            </div>
+        </div>
+        <div id="schedule-container"></div>
+    </main>
+    
+    <script>
+      function goToDashboard() {
+          window.location.href = 'http://localhost:3001/dashboard';
+      }
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+          const user = JSON.parse(localStorage.getItem('user'));
+          if (user) {
+              document.getElementById('username').textContent = user.username;
+              document.getElementById('phone').textContent = user.phone;
+
+              const avatar = document.querySelector('.avatar');
+              if (user.avatar) {
+                  avatar.style.backgroundImage = `url(${user.avatar})`;
+              } else {
+                  avatar.style.backgroundImage = 'url(/images/iconoir_profile-circle.svg)';
+              }
+
+              if (user.group) {
+                  document.getElementById('schedule-container').innerHTML = getScheduleHtml();
+              } else {
+                  document.getElementById('schedule-container').innerHTML = getNoScheduleHtml();
+              }
+          }
+      });
+
+      function loadAvatar(event) {
+          const reader = new FileReader();
+          reader.onload = function() {
+              const avatar = document.querySelector('.avatar');
+              avatar.style.backgroundImage = `url(${reader.result})`;
+              let user = JSON.parse(localStorage.getItem('user'));
+              user.avatar = reader.result;
+              localStorage.setItem('user', JSON.stringify(user));
+          }
+          reader.readAsDataURL(event.target.files[0]);
+      }
+
+      function getScheduleHtml() {
+          return `
+              <div class="dropdown">
         <input type="checkbox" id="toggle" class="dropdown-checkbox">
         <label for="toggle" class="dropdown-button">ФИО ребенка</label>
         <div class="dropdown-content">
@@ -89,6 +177,17 @@
             </table>
         </div>
     </div>
-     
+          `;
+      }
+
+      function getNoScheduleHtml() {
+          return `
+              <div class="schedule">
+                  <h2>Расписание</h2>
+                  <p>Чтобы здесь отображалось расписание, запишите ребенка в группу.</p>
+              </div>
+          `;
+      }
+    </script>
 </body>
 </html>
